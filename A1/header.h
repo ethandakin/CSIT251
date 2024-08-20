@@ -1,0 +1,1 @@
+std::string* read_line(std::string info);

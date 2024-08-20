@@ -43,8 +43,6 @@ void multiplyMatrices(float M1[][10], float M2[][10], int M1_rows, int M1_cols, 
 
     if (M1[M1_rows][M1_cols] && M2[M2_rows][M2_cols]) {
 
-
-
     } else {
 
     }
