@@ -24,6 +24,4 @@ int main() {
     catch(MyException e) {
         std::cout << e.what();
     }
-
-
 }

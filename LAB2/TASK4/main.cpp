@@ -1,4 +1,6 @@
 #include <iostream>
+// Needed for 2 decimal place printing
+#include <iomanip>
 
 void multiplyMatrices(float M1[][10], float M2[][10], int M1_rows, int M1_cols, int M2_rows, int M2_cols);
 
@@ -25,25 +27,24 @@ int main() {
 void multiplyMatrices(float M1[][10], float M2[][10], int M1_rows, int M1_cols, int M2_rows, int M2_cols) {
     // check if input is valid
 
-        float M3[M1_rows][M2_cols];
+    if (M1_cols != M2_cols) {
+        std::cout << "Invalid Matrix Dimensions" << std::endl;
+    }
 
-        for (int i = 0; i < M1_rows; i++) {
-            for (int j = 0; j < M2_cols; j++) {
-                M3[i][j] = 0;
+    float M3[M1_rows][M2_cols];
 
-                for (int k = 0; k < M2_rows; k++) {
-                    M3[i][j] += M1[i][k] * M2[k][j];
-                }
+    for (int i = 0; i < M1_rows; ++i) {
+        for (int j = 0; j < M2_cols; ++j) {
+            M3[i][j] = 0;
 
-                std::cout << M3[i][j] << "\t";
+            for (int k = 0; k < M1_cols; ++k) {
+                M3[i][j] += M1[i][k] * M2[k][j];
             }
-
-            std::cout << std::endl;
+            
+            std::cout << std::fixed;
+            std::cout << std::setprecision(2);
+            std::cout << M3[i][j] << " ";
         }
-
-    if (M1[M1_rows][M1_cols] && M2[M2_rows][M2_cols]) {
-
-    } else {
-
+        std::cout << std::endl;
     }
 }
