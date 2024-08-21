@@ -2,6 +2,11 @@
 #include <fstream>
 using namespace std;
 
+/*
+Name: Ethan Dakin
+Student Number: 8209194
+*/
+
 int main()
 {
    int bookid;
@@ -14,21 +19,24 @@ int main()
    ofstream outFile;
    outFile.open("library.txt");
 
+   // Fixed outfile condition being infinite loop
    if (outFile.bad()) {
       cout << "File could not be opened" << endl;
       return -1;
    }
 
+   // Print out the const strings, as they were never printed before
    cout << note1 << endl;
    cout << note2 << endl;
 
-   while ( cin >> bookid >> name >> price)
-   {
+   // Get user input and print
+   while ( cin >> bookid >> name >> price) {
       outFile << bookid << " " << name << " " << price << endl;
       cout << bookid << endl << name << price << endl;
    }
    
    outFile.close();
 
+   // Terminate program
    return 0;
 }

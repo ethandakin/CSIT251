@@ -88,8 +88,6 @@ double calculate_performance_score(worker w, task t) {
     std::default_random_engine generator;
     std::normal_distribution<double> distribution(w.ability - t.difficulty, t.uncertainty + w.variability);
 
-    std::cout << t.description;
-
     int n = 5 + (t.priorityLabel * 5);
     double total = 0 + (w.experienceLabel * 6);
 
@@ -98,6 +96,16 @@ double calculate_performance_score(worker w, task t) {
     }
 
     return total / n;
+}
+
+void print_task(task t) {
+    std::cout << "======================================================================" << std::endl;
+    std::cout << "processing taskId: ";
+    std::cout << "description: ";
+    std::cout << "uncertainty: ";
+    std::cout << "difficulty: ";
+    std::cout << "priority:";
+    std::cout << "workers: ";
 }
 
 int main(int argc, char* argv[]) {
@@ -132,9 +140,10 @@ int main(int argc, char* argv[]) {
         
         tasks[tasks_count] = t;
         tasks_count++;
+        print_task(t);
     }
+    
 
-    std::cout << calculate_performance_score(workers[2], tasks[1]);
 
     return 0;
 }
