@@ -1,0 +1,2 @@
+TASK 4.2: How do the 3 executables differ in size?
+The 3 executable files do not differ in size, as they are all exactly 136,874 bytes.

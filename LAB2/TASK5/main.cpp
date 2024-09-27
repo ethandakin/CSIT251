@@ -23,8 +23,8 @@ int main() {
     std::cin >> y;
 
     try {
-        // Throw the error if a float is 0
-        if (x == 0 || y == 0) {
+        // Throw the error if y is 0
+        if (y == 0) {
             throw MyException();
         }
 

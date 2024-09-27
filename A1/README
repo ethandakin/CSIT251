@@ -1,0 +1,29 @@
+INFO:
+===========================
+Student Name: Ethan Dakin
+Student Number: 8209194
+===========================
+HOW TO RUN:
+############################
+My code was ran and tested on my Windows 11 x86-64 Laptop and the Ubuntu UOW Capa server, by using the following commands.
+
+g++ ./*.cpp -std=c++17 -Wall -o ./main
+./main Tasks.txt Workers.txt Output.txt
+
+Please note that you may chain these commands by using && or ; (either with bash or powershell, respectively)
+Furthermore, if you are running this on windows the output file will be an executable, so be sure to include that in the second command.
+
+############################
+FILES:
+-------------------------
+driver.cpp
+This is the main file containing the execution of code, reading of files and outputting to a file.
+-------------------------
+header.cpp
+This contains the bulk of the code, for processing strings and converting them into workers, tasks, and for
+calculating performance scores, and task success or failure.
+------------------------
+header.h
+This file contains the prototypes for my functions in header.cpp, constant variables and structs necessary
+for the other files.
+-----------------------
