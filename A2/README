@@ -1,0 +1,21 @@
+INFO:
+===========================
+Student Name: Ethan Dakin
+Student Number: 8209194
+===========================
+HOW TO RUN:
+############################
+My code was ran and tested on my Windows 11 x86-64 Laptop and the Ubuntu UOW Capa server, by using the following commands.
+
+g++ ./*.cpp -std=c++17 -Wall -o APE
+./APE n m
+
+Please note that you may chain these commands by using && or ; (either with bash or powershell, respectively)
+Furthermore, if you are running this on windows the output file will be an executable, so be sure to include that in the second command.
+
+############################
+FILES:
+-------------------------
+main.cpp
+This is the only file of code, containing all classes, the main function and all other data structures.
+-------------------------
